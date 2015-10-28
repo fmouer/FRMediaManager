@@ -41,6 +41,7 @@ class ViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "pushToVideo"{
             var dest = segue.destinationViewController;
+            print("dest is \(dest)");
         }
     }
     
