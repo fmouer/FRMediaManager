@@ -20,6 +20,34 @@
                ReferencedContainer = "container:FRMediaManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "355E06591BE1277400DBC2B3"
+               BuildableName = "FRMediaManagerTests.xctest"
+               BlueprintName = "FRMediaManagerTests"
+               ReferencedContainer = "container:FRMediaManager.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "355E06641BE1277400DBC2B3"
+               BuildableName = "FRMediaManagerUITests.xctest"
+               BlueprintName = "FRMediaManagerUITests"
+               ReferencedContainer = "container:FRMediaManager.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "355E06591BE1277400DBC2B3"
-               BuildableName = "FRMediaManagerTests.xctest"
-               BlueprintName = "FRMediaManagerTests"
-               ReferencedContainer = "container:FRMediaManager.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "355E06641BE1277400DBC2B3"
-               BuildableName = "FRMediaManagerUITests.xctest"
-               BlueprintName = "FRMediaManagerUITests"
-               ReferencedContainer = "container:FRMediaManager.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

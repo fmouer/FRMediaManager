@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3554433A1BECFA1600499217 /* VideoRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355443391BECFA1600499217 /* VideoRecordViewController.swift */; };
+		3554433C1BECFBAD00499217 /* FRMovieRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554433B1BECFBAD00499217 /* FRMovieRecordOperation.swift */; };
+		3554433E1BECFBE300499217 /* FRMovieRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554433D1BECFBE300499217 /* FRMovieRecordView.swift */; };
 		355E064A1BE1277400DBC2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E06491BE1277400DBC2B3 /* AppDelegate.swift */; };
 		355E064C1BE1277400DBC2B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E064B1BE1277400DBC2B3 /* ViewController.swift */; };
 		355E064F1BE1277400DBC2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355E064D1BE1277400DBC2B3 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		355443391BECFA1600499217 /* VideoRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController.swift; sourceTree = "<group>"; };
+		3554433B1BECFBAD00499217 /* FRMovieRecordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRMovieRecordOperation.swift; sourceTree = "<group>"; };
+		3554433D1BECFBE300499217 /* FRMovieRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRMovieRecordView.swift; sourceTree = "<group>"; };
 		355E06461BE1277400DBC2B3 /* FRMediaManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRMediaManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355E06491BE1277400DBC2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355E064B1BE1277400DBC2B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				355E06501BE1277400DBC2B3 /* Assets.xcassets */,
 				355E06521BE1277400DBC2B3 /* LaunchScreen.storyboard */,
 				355E06551BE1277400DBC2B3 /* Info.plist */,
+				355443391BECFA1600499217 /* VideoRecordViewController.swift */,
+				3554433B1BECFBAD00499217 /* FRMovieRecordOperation.swift */,
+				3554433D1BECFBE300499217 /* FRMovieRecordView.swift */,
 			);
 			path = FRMediaManager;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 			files = (
 				355E064C1BE1277400DBC2B3 /* ViewController.swift in Sources */,
 				355E064A1BE1277400DBC2B3 /* AppDelegate.swift in Sources */,
+				3554433A1BECFA1600499217 /* VideoRecordViewController.swift in Sources */,
+				3554433C1BECFBAD00499217 /* FRMovieRecordOperation.swift in Sources */,
+				3554433E1BECFBE300499217 /* FRMovieRecordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +340,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: bingxue zhang (CAP3RNPRFC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bingxue zhang (CAP3RNPRFC)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -372,6 +385,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: bingxue zhang (CAP3RNPRFC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -481,6 +495,7 @@
 				355E06701BE1277400DBC2B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		355E06711BE1277400DBC2B3 /* Build configuration list for PBXNativeTarget "FRMediaManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +504,7 @@
 				355E06731BE1277400DBC2B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		355E06741BE1277400DBC2B3 /* Build configuration list for PBXNativeTarget "FRMediaManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +513,7 @@
 				355E06761BE1277400DBC2B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
