@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class FRMovieRecordOperation: NSObject {
+class FRMovieRecordOperation: NSObject ,AVCaptureFileOutputRecordingDelegate{
     var captureSession:AVCaptureSession!;
     
     var preViewLayer:AVCaptureVideoPreviewLayer?;
@@ -19,6 +19,9 @@ class FRMovieRecordOperation: NSObject {
     var stillImageOutput:AVCaptureStillImageOutput?;
     
     private
+    var fileOutputUrl:NSURL!;
+    
+    private
     var videoDeviceInput:AVCaptureDeviceInput!;
     
     override init() {
@@ -26,7 +29,7 @@ class FRMovieRecordOperation: NSObject {
         self.initCaptureSession();
     }
     
-    func initCaptureSession(){
+    private func initCaptureSession(){
         captureSession = AVCaptureSession.init();
         //input
         var frontCamera:AVCaptureDevice?;
@@ -61,5 +64,35 @@ class FRMovieRecordOperation: NSObject {
         preViewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill;
         preViewLayer?.backgroundColor = UIColor.blackColor().CGColor;
         self.captureSession.startRunning();
+        
+        self.fileOutputUrl = NSURL.init(fileURLWithPath:self.getFileOutPath() as String);
+    }
+    
+    func startRecordMovie(){
+        if ((movieFileOutput?.recording) == false){
+            movieFileOutput?.startRecordingToOutputFileURL(self.fileOutputUrl, recordingDelegate: self);
+        }
+        
+    }
+    
+    func stopRecordMovie(){
+        movieFileOutput?.stopRecording();
+    }
+    
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
+        
+        var mainCompositionInst = AVMutableVideoComposition.init()
+        
+    }
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAtURL fileURL: NSURL!, fromConnections connections: [AnyObject]!) {
+        
+    }
+    
+    private func getFileOutPath()->NSString{
+        var document = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
+        var path:NSString = document[0];
+        path = path.stringByAppendingPathComponent("file.mp4");
+        print("file out is \(path)");
+        return path;
     }
 }

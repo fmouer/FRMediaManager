@@ -14,14 +14,22 @@ class FRMovieRecordView: UIView {
         super.init(frame: frame);
         self.moviewRecordOperation = FRMovieRecordOperation.init();
         moviewRecordOperation.preViewLayer?.frame = self.bounds;
+        moviewRecordOperation.preViewLayer?.masksToBounds = true;
         self.layer.addSublayer(moviewRecordOperation.preViewLayer!);
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func startRecordVideo(){
+        self.moviewRecordOperation.startRecordMovie();
+    }
+    
+    func stopRecordVideo(){
+        self.moviewRecordOperation.stopRecordMovie();
+    }
     override func layoutSubviews() {
-       
     }
     /*
     // Only override drawRect: if you perform custom drawing.

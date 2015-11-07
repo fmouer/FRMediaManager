@@ -10,7 +10,8 @@ import UIKit
 
 class VideoRecordViewController: UIViewController {
     var movieRecordView:FRMovieRecordView! = nil;
-
+    var recordButton:UIButton!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         movieRecordView = FRMovieRecordView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width));
@@ -18,6 +19,19 @@ class VideoRecordViewController: UIViewController {
         movieRecordView.backgroundColor = UIColor.redColor();
         
         // Do any additional setup after loading the view.
+        recordButton = UIButton(frame: CGRectMake(100,CGRectGetMaxY(movieRecordView.frame)+20,60,60));
+        recordButton.addTarget(self, action: Selector("recordButtonEvent:"), forControlEvents: .TouchUpInside);
+        self.view.addSubview(recordButton);
+        recordButton.backgroundColor = UIColor.redColor();
+    }
+    
+    func recordButtonEvent(button:UIButton){
+        if button.selected == true{
+            movieRecordView.stopRecordVideo();
+        }else{
+            movieRecordView.startRecordVideo();
+        }
+        button.selected = !button.selected;
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +39,6 @@ class VideoRecordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
